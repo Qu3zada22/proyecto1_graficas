@@ -86,7 +86,7 @@ fn draw_cell(
         return;
     }
 
-    framebuffer.set_current_color(Color::RED);
+    framebuffer.set_current_color(Color::WHITE);
 
     for x in xo..xo + block_size {
         for y in yo..yo + block_size {
@@ -134,7 +134,7 @@ pub fn render_3d(
 
     let hh = framebuffer.height as f32/ 2.0;
 
-    framebuffer.set_current_color(Color::RED);
+    framebuffer.set_current_color(Color::WHITE);
 
     for i in 0..num_rays {
         let current_ray = i as f32 / num_rays as f32;
@@ -218,7 +218,7 @@ fn main() {
             }
         }
         //piso
-        framebuffer.set_current_color(Color::new(180, 70, 40, 255));
+        framebuffer.set_current_color(Color::GRAY);
         for y in half_height..window_height as u32 {
             for x in 0..window_width as u32 {
                 framebuffer.set_pixel(x as i32, y as i32);
