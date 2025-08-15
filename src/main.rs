@@ -211,7 +211,7 @@ fn main() {
         
         let half_height = window_height as u32 / 2;
         //cielo
-        framebuffer.set_current_color(Color::new(135, 206, 235, 255));
+        framebuffer.set_current_color(Color::GRAY);
         for y in 0..half_height {
             for x in 0..window_width as u32 {
                 framebuffer.set_pixel(x as i32, y as i32);
