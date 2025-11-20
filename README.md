@@ -1,28 +1,4 @@
-🎮 Proyecto 1 — Raycasting FPS
-
-Un juego en primera persona con mecánicas de sigilo, coleccionables, enemigos con IA básica y un sistema de raycasting hecho desde cero en Rust, utilizando la librería Raylib.
-
-✨ Abajo encontrarás imágenes, instrucciones y un espacio para el video del gameplay.
-
-📂 Estructura del Proyecto
-raycasting_graficas/
-├── project/
-│   ├── assets/             # Texturas, sprites y sonidos
-│   ├── src/                # Código fuente
-│   │   ├── audio.rs        # Manejo del audio y efectos
-│   │   ├── caster.rs       # Núcleo del raycasting
-│   │   ├── collectable.rs  # Lógica de objetos recogibles
-│   │   ├── enemy.rs        # IA y comportamiento de enemigos
-│   │   ├── framebuffer.rs  # Render de la pantalla
-│   │   ├── main.rs         # Punto de entrada del juego
-│   │   ├── maze.rs         # Generación del laberinto
-│   │   ├── player.rs       # Movimiento y acciones del jugador
-│   │   └── textures.rs     # Carga y administración de texturas
-│   ├── maze.txt            # Mapa del nivel fácil
-│   ├── maze_hard.txt       # Mapa del nivel difícil
-│   └── Cargo.toml          # Configuración y dependencias
-└── README.md               # Este archivo
-
+🎮 Proyecto 1 — Raycasting
 
 1. Clonar el repositorio
 git clone https://github.com/Qu3zada22/proyecto1_graficas.git
