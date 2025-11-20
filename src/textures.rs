@@ -1,4 +1,3 @@
-// textures.rs
 
 use raylib::prelude::*;
 use std::collections::HashMap;
@@ -16,12 +15,15 @@ impl TextureManager {
 
         // Map characters to texture file paths
         let texture_files = vec![
-            ('+', "assets/wall4.png"),
-            ('-', "assets/wall2.png"),
-            ('|', "assets/wall1.png"),
-            ('g', "assets/wall5.png"),
-            ('e', "assets/enemy.png"),
-            ('#', "assets/wall3.png"), // default/fallback
+            ('+', "assets/zara_wall.png"),
+            ('-', "assets/sephora_wall.png"),
+            ('|', "assets/lego_wall.png"),
+            ('e', "assets/police1.png"),
+            ('f', "assets/police2.png"),
+            ('#', "assets/sophos_wall.png"), //fallback
+            ('m', "assets/money.png"),
+            ('b', "assets/bag.png"),
+            ('d', "assets/debt.png"),
         ];
 
         for (ch, path) in texture_files {

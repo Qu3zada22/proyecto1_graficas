@@ -1,3 +1,4 @@
+
 use raylib::prelude::*;
 
 pub struct Framebuffer {
@@ -30,9 +31,6 @@ impl Framebuffer {
         }
     }
     
-    // --- CORRECCIÓN ---
-    // Cambiamos &self por &mut self para cumplir con los requisitos del "borrow checker"
-    // y la firma de la función `get_color` de raylib.
     pub fn get_pixel_color(&mut self, x: i32, y: i32) -> Option<Color> {
         if x >= 0 && x < self.width && y >= 0 && y < self.height {
             Some(self.color_buffer.get_color(x, y))
@@ -49,11 +47,8 @@ impl Framebuffer {
         self.current_color = color;
     }
 
-    pub fn swap_buffers(&self, window: &mut RaylibHandle, raylib_thread: &RaylibThread) {
-        if let Ok(texture) = window.load_texture_from_image(raylib_thread, &self.color_buffer) {
-            let mut renderer = window.begin_drawing(raylib_thread);
-            renderer.clear_background(self.background_color);
-            renderer.draw_texture(&texture, 0, 0, Color::WHITE);
-        }
-    } 
+    // --- CAMBIO --- Eliminada la lógica de dibujado de FPS
+    pub fn swap_buffers(&self, window: &mut RaylibHandle, raylib_thread: &RaylibThread) -> Option<Texture2D> {
+        window.load_texture_from_image(raylib_thread, &self.color_buffer).ok()
+    }
 }
