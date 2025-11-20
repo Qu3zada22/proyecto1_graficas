@@ -38,4 +38,5 @@ ESC → Salir
 
 🎥 Video de Gameplay
 
-link: 
+link: https://youtu.be/PUJZzoFLHhE
+
